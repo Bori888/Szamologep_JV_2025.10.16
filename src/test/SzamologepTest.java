@@ -24,7 +24,7 @@ public class SzamologepTest {
     }
 
     private void hibasHasznalat() {
-        //testOsztas7_0();
+        testOsztas7_0();
     }
 
     void testOsszead0_0() {
@@ -74,14 +74,16 @@ public class SzamologepTest {
         String b = "0";
         System.out.printf("osztás: %s/%s\n", a, b);
 
-        boolean voltMegfeleloKivetel = false;
-        try {
-            Szamologep.osztas(a, b);
-        } catch (ArithmeticException e) {
-            voltMegfeleloKivetel = true;
-        } catch (Exception e) {
-            voltMegfeleloKivetel = false;
-        }
+//        boolean voltMegfeleloKivetel = false;
+//        try {
+//            Szamologep.osztas(a, b);
+//        } catch (ArithmeticException e) {
+//            voltMegfeleloKivetel = true;
+//        } catch (Exception e) {
+//            voltMegfeleloKivetel = false;
+//        }
+//        assert voltMegfeleloKivetel : "Nem jött kivétel vagy nem megfelelő érkezett";
+assert Double.isInfinite(Szamologep.osztas(a, b)):"nem Infinity";
 
     }
     void testOsztas7_3() {
